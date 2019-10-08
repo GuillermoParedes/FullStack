@@ -5,7 +5,10 @@
     "scripts": {
         "client": "yarn workspace client start",
         "server": "yarn workspace server start",
-        "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\" "
+        "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\" ",
+        "ncu-client": "yarn workspace client ncu",
+        "ncu-server": "yarn workspace server ncu",
+        "ncu": "concurrently --kill-others-on-fail \"yarn ncu-server\" \"yarn ncu-client\" "
     },
     "dependencies": {
         "concurrently": "^5.0.0"
